@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>MGM CSIT Chatbot</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <div class="chat-container">
+      <div class="logo-banner">
+        <img src="/assets/Images/Title.png" alt="MGM CSIT Nanded Banner" class="banner-img">
+      </div>
+
+      <div id="chat-box"></div>
+      <div id="typing-indicator" style="display: none;">MGM Assistant is typing...</div>
+
+      <div class="input-area">
+        <input type="text" id="user-input" placeholder="Ask me about courses, fees, events..." />
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+
+    <!-- Hidden image containers -->
+    <div id="images" style="display: none;">
+      <div id="img-girls-hostel">
+        <img src="/assets/Images/Girls hostel.jpg" alt="Girls Hostel" onclick="openModal(this.src)">
+      </div>
+      <div id="img-boys-hostel">
+        <img src="/assets/Images/Boys hostel.jpg" alt="Boys Hostel" onclick="openModal(this.src)">
+      </div>
+      <div id="img-campus">
+        <img src="/assets/Images/campus.jpg" alt="Campus" onclick="openModal(this.src)" height="100px" width="250px">
+      </div>
+      <div id="img-cultural">
+        <img src="/assets/Images/Cultural.jpg" alt="Cultural Fest" onclick="openModal(this.src)" height="100px" width="250px">
+      </div>
+      <div id="img-sports">
+        <img src="/assets/Images/Girls sports.jpeg" alt="Girls Sports" onclick="openModal(this.src)" height="100px" width="250px">
+      </div>
+      <div id="img-placement">
+        <img src="/assets/Images/companies.png" alt="Placement" onclick="openModal(this.src)" height="100px" width="250px">
+      </div>
+    </div>
+
+    <!-- Separate container for map -->
+    <div id="images-map" style="display: none;">
+      <div id="img-map">
+        <iframe
+          src="https://www.google.com/maps?q=MGM+College+of+CS+%26+IT+Nanded&output=embed"
+          width="300"
+          height="200"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+    
+    <!-- Image Modal -->
+    <div id="imgModal">
+      <span onclick="closeModal()">×</span>
+      <img id="modalImg" src="" alt="Full Image">
+    </div>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>

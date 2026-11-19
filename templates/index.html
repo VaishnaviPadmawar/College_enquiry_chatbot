@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MGM CSIT Chatbot</title>
+
+    <!-- CSS PATH FIX -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="chat-container">
+
+    <div class="logo-banner">
+        <img src="{{ url_for('static', filename='assets/Images/Title.png') }}"
+             alt="MGM CSIT Nanded Banner"
+             class="banner-img">
+    </div>
+
+    <div id="chat-box"></div>
+    <div id="typing-indicator" style="display:none;">MGM Assistant is typing...</div>
+
+    <div class="input-area">
+        <input type="text" id="user-input" placeholder="Ask me about courses, fees, events..." />
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+</div>
+
+<!--  FOOTER (CORRECT PLACE) -->
+<footer class="footer">
+    © 2026 Developed by Vaishnavi Kiran Padmawar
+</footer>
+
+
+<!-- Hidden image containers -->
+<div id="images" style="display:none;">
+    <div id="img-girls-hostel">
+        <img src="{{ url_for('static', filename='assets/Images/Girls hostel.jpg') }}" onclick="openModal(this.src)">
+    </div>
+
+    <div id="img-boys-hostel">
+        <img src="{{ url_for('static', filename='assets/Images/Boys hostel.jpg') }}" onclick="openModal(this.src)">
+    </div>
+
+    <div id="img-campus">
+        <img src="{{ url_for('static', filename='assets/Images/campus.jpg') }}" height="100" width="250" onclick="openModal(this.src)">
+    </div>
+
+    <div id="img-cultural">
+        <img src="{{ url_for('static', filename='assets/Images/Cultural.jpg') }}" height="100" width="250" onclick="openModal(this.src)">
+    </div>
+
+    <div id="img-sports">
+        <img src="{{ url_for('static', filename='assets/Images/Girls sports.jpeg') }}" height="100" width="250" onclick="openModal(this.src)">
+    </div>
+
+    <div id="img-placement">
+        <img src="{{ url_for('static', filename='assets/Images/companies.png') }}" height="100" width="250" onclick="openModal(this.src)">
+    </div>
+</div>
+
+<!-- Map -->
+<div id="images-map" style="display:none;">
+    <div id="img-map">
+        <iframe
+            src="https://www.google.com/maps?q=MGM+College+of+CS+%26+IT+Nanded&output=embed"
+            width="300"
+            height="200"
+            style="border:0;">
+        </iframe>
+    </div>
+</div>
+
+<!-- Image Modal -->
+<div id="imgModal">
+    <span onclick="closeModal()">×</span>
+    <img id="modalImg" src="">
+</div>
+
+<!-- JS PATH FIX -->
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
